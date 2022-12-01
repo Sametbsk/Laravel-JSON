@@ -1,4 +1,33 @@
-# Laravel JSON Decode ve Encode
+## Laravel ile JSON
+
+
+[Laravel özelliklerini](https://laravel.com/docs/9.x/eloquent-serialization#serializing-to-json) kullanan json işlemleri<br><br>
+Laravelde verileri json a dönüştürmek için `toJson` kullanabiliriz
+
+    return $user->toJson();
+___
+
+#### JSON dan veri gizleme
+
+Şifreler gibi görünmesini istemeyeceğimiz bilgileri json dosyasından gizleyebiliriz. Bunun için models kısmına `$hidden` özelliğini ekleriz<br>
+
+    protected $hidden = ['password'];
+
+Aynı işlemi farklı biçimde yapmak da mümkün<br>
+Yine models kısmında `$visible` kullanarak izin listesi oluşturabiliriz.Sadece buradaki veriler json a eklenecektir.
+
+    protected $visible = ['first_name', 'last_name'];
+    
+Genelde görünür olarak kullanılan veriyi gizlemek için`makeHidden` tersi için `makeVisible`kullanılır.
+
+    return $user->makeHidden('attribute')->toArray();
+    
+#### JSON a veri ekleme
+
+Dizileri json a dönüştürürken veritabanında sütunu olmayan veriler eklemek isteyebilirsiniz<br>?<br>?<br>?
+
+
+
 
 
 ## Dizileri JSON'a dönüştürme(JSON encode)
@@ -113,6 +142,3 @@ Yukarıdaki JSON dosyasından sadece area altındaki verileri çekmek istiyoruz
 Çıktı şu şekilde olur<br>
 php<br>laravel
 
-## Laravel ile JSON
-
-[Laravel özelliklerini](https://laravel.com/docs/9.x/eloquent-serialization#serializing-to-json) kullanan json işlemleri
