@@ -22,6 +22,7 @@ Genelde görünür olarak kullanılan veriyi gizlemek için`makeHidden` tersi i�
 
     return $user->makeHidden('attribute')->toArray();
     
+___
 #### JSON a veri ekleme
 
 Dizileri json a dönüştürürken veritabanında sütunu olmayan veriler eklemek isteyebilirsiniz<br>?<br>?<br>?
