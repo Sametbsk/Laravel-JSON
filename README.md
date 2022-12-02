@@ -97,8 +97,8 @@ ___
     
     {
        "id":13,
-      "isim":"Mehmet",
-      "mail":"Mehmetonal@gmail.com",
+      "isim":"Alper",
+      "mail":"Alperctn@gmail.com",
     }]';
     
     $data = json_decode($Ogrencidata);
@@ -114,8 +114,8 @@ id - 12<br>
 isim - Ali<br>
 mail - alisefa@gmail.com<br>
 id - 13<br>
-isim - Mehmet<br>
-mail - Mehmetonal@gmail.com
+isim - Alper<br>
+mail - Alperctn@gmail.com
 
 ___
 
